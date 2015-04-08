@@ -1,0 +1,16 @@
+<ion-view view-title="Talks">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="talk in talks" type="item-text-wrap" href="#/tab/chats/{{talk.id}}">
+        <img ng-src="{{talk.speakers[0].urlimage}}">
+        <h2>{{talk.title}}</h2>
+        <p>{{talk.summary}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(talk)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
